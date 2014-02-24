@@ -21,10 +21,6 @@ cite {
 	color: red;
 }
 
-div#wrapper {
-	/*width: 100%;*/
-}
-
 a {
 	text-decoration: none;
 	color: inherit;
@@ -33,10 +29,15 @@ a {
 
 header {
 	background-color: #008080;
-	padding: 10px 100px;
+	padding: 10px 0px;
 	line-height: 30px;
 	border-bottom: 2px solid #87CEEB;
 	color: #FFF;
+}
+
+header h1 {
+	width: 1024px;
+	margin: auto;
 }
 
 header a {
@@ -55,17 +56,20 @@ section {
 	margin-bottom: 30px;
 }
 
+section#main_download {
+	height: 300px;
+}
+
 figure {
 	display: inline-block;
-	width: 512px;
+	width: 50%;
 	margin: 0;
 	float: left;
-	padding: 5px 0;
-	padding-bottom: 3.5px;
 }
 
 figure img {
 	width: 100%;
+	height: 300px;
 }
 
 figure figcaption {
@@ -73,25 +77,19 @@ figure figcaption {
 	color: #FFF;
 	background-color: rgba(0,0,0,0.4);
 	padding: 5px 30px;
-	width: inherit;
 	font-weight: 600;
 	font-variant: small-caps;
-	width: 451px;
 }
 
 article {
 	display: inline-block;
 	text-align: justify;
-
-	-webkit-box-shadow: -7px 0px 10px -5px #008B8B;
-	box-shadow: -7px 0px 10px -5px #008B8B;
-	padding: 20px;
-	height: 354px;
-	border-top: 1px solid #008B8B;
-	border-bottom: 1px solid #008B8B;
-	border-left: 1px solid #008B8B;
-	width: 471px;
 	overflow: auto;
+}
+
+section#main_download article {
+	width: 50%;
+	height: 300px;
 }
 
 article header {
@@ -99,11 +97,13 @@ article header {
 	margin-bottom: 30px;
 }
 
+section#main_download article header h1 {
+	width: inherit;
+}
+
 .content {
 	margin: auto;
-	width: 384px;
 	text-align: center;
-	padding-top: 15px;
 }
 
 #getDL {
@@ -143,6 +143,7 @@ article header {
 
 article p {
 	font-size: 12px;
+	padding: 0px 10px;
 }
 
 article footer {
@@ -150,6 +151,14 @@ article footer {
 	font-style: italic;
 	margin: auto;
 	margin: 20px 0;
+}
+
+article footer {
+	background-color: inherit;
+	padding: 0;
+	line-height: inherit;
+	border-top: 0;
+	color: inherit;
 }
 
 nav {
@@ -164,12 +173,11 @@ nav .quicknav {
 	background-attachment: scroll;
 	background-repeat: no-repeat;
 	background-position: top center;
-	height: 200px;
 }
 
 nav .espace {
 	display: inherit;
-	width: 6px;
+	width: 9px;
 }
 
 nav .DDL {
@@ -186,11 +194,10 @@ nav .Blog {
 
 .linkbox {
 	color: #FFF;
-	position: absolute;
 	text-align: center;
 	width: inherit;
 	height: 50px;
-	opacity: 0.85;
+	opacity: 0.95;
 	background: #008080;
 	margin-top: 150px;
 	padding-top: 10px;
@@ -199,27 +206,22 @@ nav .Blog {
 
 footer {
 	background-color: #008080;
-	padding: 10px 100px;
+	padding: 10px 0px;
 	line-height: 15px;
 	border-top: 2px solid #87CEEB;
 	color: #FFF;
 }
 
-article footer {
-	background-color: inherit;
-	padding: 0;
-	line-height: inherit;
-	border-top: 0;
-	color: inherit;
+footer p {
+	margin: auto;
+	text-align: right;
+	width: 1024px;
 }
 
 #widget {
 	width: inherit;
-	background: #008080;
-	border-top: 2px solid #87CEEB;
-	border-bottom: 2px solid #87CEEB;
 	margin: auto;
-	margin-bottom: 5px;
+	margin-bottom: 20px;
 }
 
 .widget {
@@ -237,11 +239,6 @@ article footer {
 	border-bottom: 0px;
 }
 
-.widget meter {
-	width: 90%;
-	margin: auto;
-}
-
 .widget hr {
 	background: #FFF;
 	border: 0;
@@ -255,6 +252,7 @@ article#CGU-Licence {
 	border: 1px solid #008B8B;
 	box-shadow: 7px 0px 10px -5px #008B8B, -7px 0px 10px -5px #008B8B;
 	height: auto;
+	padding: 0px;
 }
 
 article#CGU-Licence h2 {
@@ -276,12 +274,16 @@ ul.no-list {
 	list-style-type: none;
 }
 
-.underline {
-	text-decoration: underline;
-	font-weight: 600;
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
 }
 
-.right {
-	float: right;
-	position: relative;
+::-webkit-scrollbar-thumb {
+	background: #008080;
+}
+
+::-webkit-scrollbar-button {
+	display: none;
 }
