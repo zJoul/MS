@@ -57,7 +57,11 @@ section {
 }
 
 section#main_download {
-	height: 300px;
+	height: 352px;
+}
+
+section header {
+	text-indent: 20px;
 }
 
 figure {
@@ -90,6 +94,7 @@ article {
 section#main_download article {
 	width: 50%;
 	height: 300px;
+	float: left;
 }
 
 article header {
@@ -97,13 +102,10 @@ article header {
 	margin-bottom: 30px;
 }
 
-section#main_download article header h1 {
-	width: inherit;
-}
-
 .content {
 	margin: auto;
 	text-align: center;
+	padding-top: 20px;
 }
 
 #getDL {
@@ -169,15 +171,12 @@ nav .quicknav {
 	display: inherit;
 	border-radius: 20px;
 	background-size: contain;
-	width: 330px;
+	width: 331px;
+	float: left;
 	background-attachment: scroll;
 	background-repeat: no-repeat;
 	background-position: top center;
-}
-
-nav .espace {
-	display: inherit;
-	width: 9px;
+	padding: 0 5px;
 }
 
 nav .DDL {
@@ -210,6 +209,8 @@ footer {
 	line-height: 15px;
 	border-top: 2px solid #87CEEB;
 	color: #FFF;
+	float: left;
+	width: 100%;
 }
 
 footer p {
@@ -225,12 +226,9 @@ footer p {
 }
 
 .widget {
-	width: 31%;
+	width: 200px;
 	display: inline-block;
-	margin: 5px auto;
-	border-right: 1px solid #FFF;
-	border-left: 1px solid #FFF;
-	padding: 0px 10px;
+	float: left;
 }
 
 .widget header {
@@ -284,6 +282,51 @@ ul.no-list {
 	background: #008080;
 }
 
+::-webkit-scrollbar-track-piece {
+	background: rgba(0, 128, 128, 0.3);
+}
+
 ::-webkit-scrollbar-button {
 	display: none;
+}
+
+/* Tableau Anime */
+table {
+	width: inherit;
+	border: 1px solid #008080;
+	border-top: 0px;
+	border-collapse: collapse;
+}
+
+table tr {
+	width: inherit;
+	height: 30px;
+}
+
+table tr td.anime-name {
+	width: 60%;
+	text-indent: 20px;
+}
+
+table tr td.anime-torrent,
+table tr td.anime-ddl {
+	width: 20%;
+	text-align: center;
+}
+
+table tr td.anime-name,
+table tr td.anime-torrent {
+	border-right: 1px solid #008080;
+	border-color: #5F7F82;
+}
+
+table tr:nth-of-type(even){
+	background: #5F7F82;
+	color: #FFF;
+	border-collapse: #FFF;
+}
+
+table tr:nth-of-type(even) td.anime-name,
+table tr:nth-of-type(even) td.anime-torrent {
+	border-color: #FFF;
 }
