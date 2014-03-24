@@ -2,10 +2,6 @@ header, section, footer, aside, nav, article, figure {
 	display: block;
 }
 
-header, footer {
-	min-width: 1024px;
-}
-
 html {
 	font-size: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -29,6 +25,10 @@ a {
 	text-decoration: none;
 	color: inherit;
 	border-bottom: 1px dotted;
+}
+
+div#wrapper {
+	min-width: 1024px;
 }
 
 header {
